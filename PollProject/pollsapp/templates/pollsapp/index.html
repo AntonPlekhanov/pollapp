@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+<head>
+<Title>Опросы</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'pollsapp/css/index.css' %}">
+<body>
+    <h1>Опросы</h1>
+
+    <a href="{% url 'polls:create_poll_and_choices' %}">Создать опрос</a>
+
+    <ul>
+        {% for poll in polls %}
+            <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+    <title>{{ poll.question }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'pollsapp/css/detail.css' %}">
+</head>
+<body>
+    <h1>{{ poll.question }}</h1>
+    <form action="{% url 'polls:vote' poll.id %}" method="post">
+        {% csrf_token %}
+        {% for choice in poll.choice_set.all %}
+            <input type="radio" name="choice" value="{{ choice.id }}">{{ choice.choice_text }}<br>
+        {% endfor %}
+        <input type="submit" value="Голосовать">
+    </form>
+    <p><a href="{% url 'polls:results' poll.id %}">Показать результаты</a></p>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>

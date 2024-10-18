@@ -1,0 +1,16 @@
+{% load static %}
+<Title>Создание опроса</title>
+<link rel="stylesheet" type="text/css" href="{% static 'pollsapp/css/create_poll_and_choices.css' %}">
+<h1>Создать опрос</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ poll_form.as_p }}
+
+    <h2>Варианты ответов</h2>
+    {% for form in choice_forms %}
+        {{ form.as_p }}
+    {% endfor %}
+
+    <button type="submit">Создать опрос</button>
+</form>
+

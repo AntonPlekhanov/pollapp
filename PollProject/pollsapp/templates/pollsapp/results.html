@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+<head>
+    <title>Результаты опроса: {{ poll.question }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'pollsapp/css/results.css' %}">
+</head>
+<body>
+    <h1>Результат опроса: {{ poll.question }}</h1>
+    <ul>
+        {% for choice in poll.choice_set.all %}
+            <li>{{ choice.choice_text }}: {{ choice.votes }} - количество голосов</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'polls:index' %}">Вернуться к опросам</a></p>
+</body>
+</html>

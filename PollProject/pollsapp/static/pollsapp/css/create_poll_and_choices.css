@@ -1,0 +1,69 @@
+/* create_poll_and_choices.css */
+
+body {
+    font-family: Arial, sans-serif; /* Шрифт для текста */
+    background-color: #f4f4f4; /* Цвет фона страницы */
+    margin: 0; /* Убираем отступы */
+    padding: 20px; /* Добавляем внутренние отступы */
+}
+
+/* Стили для заголовка */
+h1 {
+    color: #333; /* Цвет текста заголовка */
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для формы */
+form {
+    background: #fff; /* Цвет фона для формы */
+    padding: 20px; /* Внутренние отступы для формы */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    max-width: 600px; /* Максимальная ширина формы */
+    margin: 0 auto; /* Центрируем форму */
+}
+
+/* Стили для заголовка внутри формы */
+h2 {
+    color: #555; /* Цвет текста заголовка для вариантов ответов */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Стили для кнопки отправки */
+button {
+    background-color: #007BFF; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указываем, что элемент кликабельный */
+    font-size: 16px; /* Размер шрифта */
+    display: block; /* Заставляем кнопку занимать всю ширину родителя */
+    margin: 20px auto; /* Центрируем кнопку и добавляем отступы */
+}
+
+/* Эффект наведения для кнопки */
+button:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+}
+
+/* Стили для полей формы */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%; /* Ширина полей формы */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Отступы между полями */
+    border: 1px solid #ccc; /* Рамка для полей */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+/* Эффект фокуса для полей формы */
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #007BFF; /* Цвет рамки при фокусе */
+    outline: none; /* Убираем стандартный контур */
+}
+
